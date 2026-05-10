@@ -136,7 +136,8 @@ const [activeImages, setActiveImages] = useState(
   <div className="relative flex justify-center">
 
   {/* Vertical Line */}
-  <div className="absolute top-[-120px] bottom-[-120px] w-[3px] bg-gradient-to-b from-lime-200/20 via-white/10 to-lime-200/20" animate={{
+  <motion.div className="absolute top-[-120px] bottom-[-120px] w-[3px] bg-gradient-to-b from-lime-200/20 via-white/10 to-lime-200/20" 
+  animate={{
   y: [0, -6, 0],
   opacity: [0.7, 1, 0.7],
 }}

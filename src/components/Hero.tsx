@@ -155,16 +155,16 @@ function ParticleBackground() {
 
 /* ─── Floating Skill Badges ─────────────────────────────────── */
 const BADGES = [
-  { text: "Next.js",    x: "7%",  y: "16%", dur: 5.2, delay: 0 },
-  { text: "TypeScript", x: "83%", y: "21%", dur: 6.1, delay: 0.4 },
-  { text: "React",      x: "10%", y: "70%", dur: 4.8, delay: 1.1 },
-  { text: "Node.js",    x: "78%", y: "65%", dur: 5.6, delay: 0.7 },
+  { text: "Education Analysis",    x: "7%",  y: "16%", dur: 5.2, delay: 0 },
+  { text: "Python", x: "83%", y: "21%", dur: 6.1, delay: 0.4 },
+  { text: "Data Systems",      x: "10%", y: "70%", dur: 4.8, delay: 1.1 },
+  { text: "AI Systems",    x: "78%", y: "65%", dur: 5.6, delay: 0.7 },
   { text: "AI/ML",      x: "87%", y: "43%", dur: 4.4, delay: 1.6 },
-  { text: "Product",    x: "4%",  y: "43%", dur: 6.5, delay: 0.2 },
+  { text: "Quantitative Thinking",    x: "4%",  y: "43%", dur: 6.5, delay: 0.2 },
   { text: "Design",     x: "73%", y: "80%", dur: 5.0, delay: 0.9 },
   { text: "Shipping",   x: "18%", y: "82%", dur: 4.6, delay: 1.9 },
   { text: "Systems",    x: "88%", y: "12%", dur: 5.8, delay: 1.3 },
-  { text: "Craft",      x: "3%",  y: "28%", dur: 4.2, delay: 0.6 },
+  { text: "Geopolitics",      x: "3%",  y: "28%", dur: 4.2, delay: 0.6 },
 ];
 
 function FloatingBadges() {

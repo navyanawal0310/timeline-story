@@ -14,7 +14,7 @@ import SystemsExploring from "../components/SystemsExploring";
 export default function Home() {
 const [showNavbar, setShowNavbar] = useState(false);
 const [activeSection, setActiveSection] = useState("hero");
-const [visible, setVisible] = useState(true);
+const [visible, setVisible] = useState(false);
   useEffect(() => {
 
   const lenis = new Lenis({

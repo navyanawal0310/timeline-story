@@ -212,7 +212,7 @@ transition={{
   group-hover:opacity-100
   group-hover:translate-y-0
   shadow-[0_0_40px_rgba(190,242,100,0.06)]
-  z-50
+  z-10
 
   ${
   index === 0
@@ -278,6 +278,7 @@ transition={{
             font-black
             leading-[0.95]
             mb-10
+            relative z-20
           "
         >
           Building

@@ -200,9 +200,9 @@ transition={{
   w-[420px]
   rounded-2xl
   border
-  border-white/10
-  bg-black/70
-  backdrop-blur-md
+  border-lime-200/20
+  bg-black/95
+  backdrop-blur-2xl
   p-7
   opacity-0
   translate-y-3

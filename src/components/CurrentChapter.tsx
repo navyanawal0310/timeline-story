@@ -216,9 +216,9 @@ transition={{
 
   ${
     index === 0
-      ? "top-10 left-0"
+      ? "top-36 left-0"
       : index === 1
-      ? "top-10 right-0"
+      ? "top-36 right-0"
       : index === 2
       ? "bottom-10 right-0"
       : "bottom-10 left-0"

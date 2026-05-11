@@ -75,7 +75,7 @@ const [visible, setVisible] = useState(false);
   return (
     <>
     <FloatingNavbar
-  visible={visible}
+  visible={showNavbar}
   activeSection={activeSection}
   setActiveSection={setActiveSection}
 />

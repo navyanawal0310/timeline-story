@@ -19,7 +19,7 @@ const visionNodes = [
     description:
       "Investigating how technology and intelligent systems can support humanitarian initiatives, accessibility, healthcare, and community-driven impact.",
     position: {
-      top: "12%",
+      top: "2%",
       left: "52%",
     },
   },

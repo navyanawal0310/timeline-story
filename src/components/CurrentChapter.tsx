@@ -215,14 +215,14 @@ transition={{
   z-50
 
   ${
-    index === 0
-      ? "top-36 left-0"
-      : index === 1
-      ? "top-36 right-0"
-      : index === 2
-      ? "bottom-10 right-0"
-      : "bottom-10 left-0"
-  }
+  index === 0
+    ? "top-64 left-0"
+    : index === 1
+    ? "top-64 right-0"
+    : index === 2
+    ? "bottom-20 right-0"
+    : "bottom-20 left-0"
+}
 `}
     >
       <p className="text-gray-300 text-[20px] leading-relaxed">

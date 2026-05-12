@@ -109,6 +109,7 @@ bg-lime-300/8 blur-[180px]" />
           items-center
           justify-center
           pointer-events-none
+          z-0
         "
       >
 
@@ -163,7 +164,7 @@ transition={{
   scale: 1.08,
   y: -4,
 }}
-    className="absolute group cursor-pointer will-change-transform"
+    className="absolute group cursor-pointer will-change-transform z-20"
     style={item.position}
   >
 
@@ -212,7 +213,7 @@ transition={{
   group-hover:opacity-100
   group-hover:translate-y-0
   shadow-[0_0_40px_rgba(190,242,100,0.06)]
-  z-10
+  z-50
 
   ${
   index === 0

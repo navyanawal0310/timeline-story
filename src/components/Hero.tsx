@@ -415,7 +415,7 @@ function AboutPanel({ open }: { open: boolean }) {
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, x: -16, filter: "blur(6px)" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-20 left-6 z-50 w-[440px]"
+          className="absolute top-20 left-6 z-[60] w-[440px]"
         >
           <div
             className="relative rounded-2xl overflow-hidden border border-white/[0.08]"
@@ -561,7 +561,7 @@ export default function Hero() {
       <NumberAccent />
 
       {/* About Me toggle */}
-      <div className="absolute top-6 left-6 z-50">
+      <div className="absolute top-6 left-6 z-50" style={{ isolation: "isolate" }}>
         <motion.button
           onClick={() => setAboutOpen((o) => !o)}
           whileHover={{ scale: 1.03 }}

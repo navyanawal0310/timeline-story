@@ -16,7 +16,7 @@ const timelineData = [
       "Served as Vice President while simultaneously leading multiple student-driven initiatives across academics, innovation, and public engagement. \nDirected the Commerce Club, contributed to the MUN Secretariat, and led the School Innovation Council: building strong foundations in leadership, organization, and collaborative problem-solving. \nAlongside academics, actively participated in hackathons, public speaking events, and idea-driven competitions that sparked an early interest in technology, systems, and creative thinking.",
   },
   {
-    date: "08/2020",
+    date: "08/2025",
     title: "The Exploration",
     images: [
   "/images/timeline/bhumi.jpg",
@@ -27,7 +27,7 @@ const timelineData = [
       "Entered college with a growing interest in technology, digital systems, and emerging ecosystems. Became part of the MUNSoc society and the Web3 Club, exploring communication, decentralized technologies, and collaborative innovation. Alongside campus involvement, contributed to volunteering initiatives with a student-data-focused NGO, gaining exposure to real-world impact, research-driven thinking, and community-centered work.",
   },
   {
-    date: "02/2022",
+    date: "05/2026",
     title: "Building Forward",
     images: [
   "/images/timeline/unvotes.jpeg",

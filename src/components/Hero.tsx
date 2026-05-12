@@ -415,7 +415,7 @@ function AboutPanel({ open }: { open: boolean }) {
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, x: -16, filter: "blur(6px)" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed top-20 left-6 z-[999] w-[440px]"
+          className="absolute top-20 left-6 z-50 w-[440px]"
         >
           <div
             className="relative rounded-2xl overflow-hidden border border-white/[0.08]"
@@ -537,6 +537,25 @@ export default function Hero() {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
+    <>
+    {/* About Me toggle — outside <section> so overflow-hidden never clips or intercepts clicks */}
+    <div className="fixed top-6 left-6 z-[9999]" style={{ isolation: "isolate" }}>
+      <motion.button
+        onClick={() => setAboutOpen((o) => !o)}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        className="flex items-center gap-3 px-5 py-3 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm text-sm tracking-[0.2em] uppercase text-gray-400 hover:text-lime-300 hover:border-lime-300/20 transition-colors duration-300"
+      >
+        <div className="relative w-4 h-3 flex flex-col justify-between">
+          <motion.span animate={aboutOpen ? { rotate: 45, y: 5.5 } : { rotate: 0, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }} className="block h-px bg-current origin-left" />
+          <motion.span animate={aboutOpen ? { opacity: 0 } : { opacity: 1 }} transition={{ duration: 0.15 }} className="block h-px bg-current" />
+          <motion.span animate={aboutOpen ? { rotate: -45, y: -5.5 } : { rotate: 0, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }} className="block h-px bg-current origin-left" />
+        </div>
+        <span>{aboutOpen ? "Close" : "About Me"}</span>
+      </motion.button>
+    </div>
+    <AboutPanel open={aboutOpen} />
+
     <section className="relative min-h-screen bg-[#080808] text-white flex items-center justify-center px-6 overflow-hidden">
       {/* Layer stack */}
       <ParticleBackground />
@@ -559,24 +578,6 @@ export default function Hero() {
 
       {/* Top number accent */}
       <NumberAccent />
-
-      {/* About Me toggle */}
-      <div className="absolute top-6 left-6 z-50" style={{ isolation: "isolate" }}>
-        <motion.button
-          onClick={() => setAboutOpen((o) => !o)}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-3 px-5 py-3 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm text-sm tracking-[0.2em] uppercase text-gray-400 hover:text-lime-300 hover:border-lime-300/20 transition-colors duration-300"
-        >
-          <div className="relative w-4 h-3 flex flex-col justify-between">
-            <motion.span animate={aboutOpen ? { rotate: 45, y: 5.5 } : { rotate: 0, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }} className="block h-px bg-current origin-left" />
-            <motion.span animate={aboutOpen ? { opacity: 0 } : { opacity: 1 }} transition={{ duration: 0.15 }} className="block h-px bg-current" />
-            <motion.span animate={aboutOpen ? { rotate: -45, y: -5.5 } : { rotate: 0, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }} className="block h-px bg-current origin-left" />
-          </div>
-          <span>{aboutOpen ? "Close" : "About Me"}</span>
-        </motion.button>
-      </div>
-      <AboutPanel open={aboutOpen} />
 
       {/* ── Hero Content ── */}
       <motion.div
@@ -665,5 +666,6 @@ export default function Hero() {
         </svg>
       </motion.div>
     </section>
+    </>
   );
 }
